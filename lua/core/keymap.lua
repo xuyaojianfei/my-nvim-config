@@ -30,3 +30,5 @@ keymap.set("n", "<C-O>", ":bnext<CR>")
 keymap.set("n", "<C-I>", ":bprevious<CR>")
 -- 关闭buffer
 keymap.set("n", "<C-X>", ":bdelete<CR>")
+-- markdown
+keymap.set("n","<leader>m", ":MarkdownPreview<CR>")
