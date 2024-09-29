@@ -25,6 +25,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- ---------- 插件 ---------- ---
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>c", ":NvimTreeFindFile<CR>")
 -- 切换buffer
 keymap.set("n", "<C-O>", ":bnext<CR>")
 keymap.set("n", "<C-I>", ":bprevious<CR>")
