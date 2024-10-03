@@ -4,7 +4,7 @@ return {
   {"L3MON4D3/LuaSnip"},             -- lua编写的snippet引擎
   {"saadparwaiz1/cmp_luasnip"},
   {"rafamadriz/friendly-snippets"}, -- 大佬总结的一些snippet
-
+  { "hrsh7th/cmp-cmdline"},
   {
     "hrsh7th/nvim-cmp",
     config = function()
@@ -67,6 +67,29 @@ return {
             "i",
             "s",
           }),
+        }),
+
+        -- `/` cmdline setup.
+        cmp.setup.cmdline('/', {
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = {
+            { name = 'buffer' }
+          }
+        }),
+
+        -- `:` cmdline setup.
+        cmp.setup.cmdline(':', {
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = cmp.config.sources({
+            { name = 'path' }
+          }, {
+            {
+              name = 'cmdline',
+              option = {
+                ignore_cmds = { 'Man', '!' }
+              }
+            }
+          })
         }),
 
         -- 这里重要
