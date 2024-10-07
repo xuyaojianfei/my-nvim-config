@@ -24,7 +24,7 @@ opt.clipboard:append("unnamedplus")
 
 -- 默认新窗口右和下
 opt.splitright = true
-opt.splitbelow = ture
+opt.splitbelow = true
 
 -- 搜索
 opt.ignorecase = true
